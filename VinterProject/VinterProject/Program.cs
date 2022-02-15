@@ -1,26 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
-using Raylib_cs;
 using System.Numerics;
+using Raylib_cs;
 
-Raylib.SetTargetFPS(60);
-Raylib.InitWindow(800, 600, "Go");
+Base();
 
-String Location = "Beginning";
-
-bool Playing = true;
-
-if (Playing = true)
+static void Base()
 {
-    main();
+
+    string location = "Beginning";
+
+    bool playing = true;
+
+    if (playing == true)
+    {
+        Main(location, playing);
+    }
 }
 
-static void main()
+static void Main(string location, bool playing)
 {
+    int life = 1;
+    bool replay = false;
+
+    System.Console.WriteLine($"You're currently in {location}");
 
 
-    if (something = "yes")
+
+
+
+    if (location != "beginning" && life == 0 && replay == true)
     {
-        Playing = false;
+        location = "beginning";
+        life = 1;
     }
+
+    if (location == "blyat")
+    {
+        playing = false;
+    }
+    Console.ReadLine();
+
 }
