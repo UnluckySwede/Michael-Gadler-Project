@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Numerics;
-using Raylib_cs;
+
 
 Base();
 
@@ -9,36 +9,41 @@ static void Base()
 {
 
     string location = "Beginning";
-
     bool playing = true;
+    Main(location, playing);
 
-    if (playing == true)
-    {
-        Main(location, playing);
-    }
 }
-
 static void Main(string location, bool playing)
 {
-    int life = 1;
-    bool replay = false;
-
-    System.Console.WriteLine($"You're currently in {location}");
-
-
-
-
-
-    if (location != "beginning" && life == 0 && replay == true)
+    while (playing == true)
     {
-        location = "beginning";
-        life = 1;
-    }
+        int life = 1;
 
-    if (location == "blyat")
-    {
-        playing = false;
+        System.Console.WriteLine($"You're currently in {location}");
+        System.Console.WriteLine("You look around and see nothing");
+
+        location = Console.ReadLine();
+
+        if (location == "you")
+        {
+            location = "yes";
+        }
+
+
+
+
+        if (location != "beginning" && life == 0)
+        {
+            location = "blyat";
+            life = 1;
+        }
+
+        if (location == "blyat")
+        {
+            playing = false;
+        }
+        Console.ReadLine();
+
     }
-    Console.ReadLine();
 
 }
