@@ -10,10 +10,11 @@ static void Base()
 
     string location = "Beginning";
     bool playing = true;
-    Main(location, playing);
+    (location, playing) = Main(location, playing);
 
 }
-static void Main(string location, bool playing)
+
+static (string, bool) Main(string location, bool playing)
 {
     while (playing == true)
     {
@@ -45,5 +46,7 @@ static void Main(string location, bool playing)
         Console.ReadLine();
 
     }
+
+    return (location, playing);
 
 }
