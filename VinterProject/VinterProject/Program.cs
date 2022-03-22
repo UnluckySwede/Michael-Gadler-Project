@@ -8,23 +8,39 @@ Base();
 static void Base()
 {
 
-    string location = "Beginning";
+    int location = 0;
     bool playing = true;
     (location, playing) = Main(location, playing);
 
 }
 
-static (string, bool) Main(string location, bool playing)
+static (int, bool) Main(int location, bool playing)
 {
     int life = 3;
     string replay = "placeholder";
+
+    string[] names = { "forrest", "woods", "river" };
+    string[] desc = { "greeeeeeeeen", "Also green", "blue" };
+    string[] allowedPaths = { "1", "02", "1" };
 
     while (playing == true)
     {
         bool hpLoss = false;
 
-        System.Console.WriteLine($"You're currently in {location} and have {life} lives left.");
+        System.Console.WriteLine($"You're currently in {names[location]} and have {life} lives left.");
+        Console.WriteLine(desc[location]);
+
         System.Console.WriteLine("You look around and see nothing");
+
+        // Vart vill du gå?
+        // w = readline
+        // Om allwedpaths[location].contains("w")
+        if (allowedPaths[location].Contains("1"))
+        {
+
+        }
+        // 
+
 
         location = Console.ReadLine();
 
